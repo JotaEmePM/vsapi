@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "album": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::album.album",
+      "inversedBy": "products"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Nuevo",
+        "Usado"
+      ]
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Habilitado": {
+      "type": "boolean"
+    },
+    "Stock": {
+      "type": "integer"
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Vinilo",
+        "CD",
+        "Cassette",
+        "DVD",
+        "Libro",
+        "Ropa",
+        "Electrónica",
+        "Accesorio",
+        "Repuesto",
+        "Otro"
+      ]
+    },
+    "estadoDisco": {
+      "type": "enumeration",
+      "enum": [
+        "Mint",
+        "NearMint",
+        "Very Good Plus",
+        "Very Good",
+        "Poor Fair",
+        "Nuevo"
+      ]
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "product"
+    }
+  }
+}
