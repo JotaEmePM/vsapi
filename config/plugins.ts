@@ -9,5 +9,15 @@ export default ({ env }) => ({
         directory: env('SUPABASE_DIRECTORY')
       }
     }
+  },
+  'vercel-deploy': {
+    enabled: true,
+    config: {
+      deployHook: env('VERCEL_DEPLOYHOOK'),
+      apiToken: env('VERCEL_APITOKEN'),
+      appFilter: env('VERCEL_APPFILTER'),
+      teamFilter: env('VERCEL_TEAMFILTER'),
+      roles: ['strapi-super-admin', 'strapi-editor', 'strapi-author']
+    }
   }
 })
