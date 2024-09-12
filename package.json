@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
+  "packageManager": "pnpm@9.0.5",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -19,19 +20,17 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
-    "strapi-plugin-vercel-deploy": "^1.4.0",
     "strapi-provider-upload-supabase": "^1.0.0",
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "JotaEmePM"
   },
   "strapi": {
     "uuid": "bb9d2364-6a6c-4ac4-97c2-156acf7b11fe"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
-    "npm": ">=6.0.0"
+    "node": "20.10.0"
   },
   "license": "MIT"
 }
