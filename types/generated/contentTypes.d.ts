@@ -2351,6 +2351,8 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'oneToOne',
       'api::categoria.categoria'
     >;
+    multimedia: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    isFeatured: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

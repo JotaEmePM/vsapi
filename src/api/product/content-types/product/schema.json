@@ -78,6 +78,19 @@
       "relation": "oneToOne",
       "target": "api::categoria.categoria",
       "inversedBy": "product"
+    },
+    "multimedia": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "isFeatured": {
+      "type": "boolean"
     }
   }
 }
