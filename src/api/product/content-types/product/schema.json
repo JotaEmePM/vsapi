@@ -80,17 +80,23 @@
       "inversedBy": "product"
     },
     "multimedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "isFeatured": {
       "type": "boolean"
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::artist.artist"
     }
   }
 }

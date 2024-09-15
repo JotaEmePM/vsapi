@@ -2355,6 +2355,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
     >;
     multimedia: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     isFeatured: Attribute.Boolean;
+    artist: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::artist.artist'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
