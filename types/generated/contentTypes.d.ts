@@ -2282,11 +2282,6 @@ export interface ApiCategoriaCategoria extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     slug: Attribute.UID;
-    product: Attribute.Relation<
-      'api::categoria.categoria',
-      'oneToOne',
-      'api::product.product'
-    >;
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

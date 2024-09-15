@@ -76,8 +76,7 @@
     "categoria": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::categoria.categoria",
-      "inversedBy": "product"
+      "target": "api::categoria.categoria"
     },
     "multimedia": {
       "type": "media",
