@@ -2274,6 +2274,7 @@ export interface ApiCategoriaCategoria extends Schema.CollectionType {
     singularName: 'categoria';
     pluralName: 'categorias';
     displayName: 'Categoria';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2286,6 +2287,7 @@ export interface ApiCategoriaCategoria extends Schema.CollectionType {
       'oneToOne',
       'api::product.product'
     >;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

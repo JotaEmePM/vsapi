@@ -4,7 +4,8 @@
   "info": {
     "singularName": "categoria",
     "pluralName": "categorias",
-    "displayName": "Categoria"
+    "displayName": "Categoria",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,16 @@
       "relation": "oneToOne",
       "target": "api::product.product",
       "mappedBy": "categoria"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
